@@ -48,7 +48,7 @@ func (ls *LogServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if ls.Name != "" {
 		prefix = ls.Name + "> "
 	}
-	log.Printf("%sserving %s -> %s", prefix, r.RemoteAddr, r.URL)
+	log.Printf("%sserving %s -> %s", prefix, r.Header.Get("X-FORWARDED-FOR"), r.URL)
 	ls.Inner.ServeHTTP(w, r)
 }
 
