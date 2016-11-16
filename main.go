@@ -65,5 +65,6 @@ func main() {
 
 	addr := fmt.Sprintf("localhost:%d", *port)
 	log.Printf("Listening on %s...", addr)
+	log.Printf("/share/ -> %s", *shareFile)
 	http.ListenAndServe(addr, nil)
 }
