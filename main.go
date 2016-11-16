@@ -7,13 +7,12 @@ import (
 	"net/http"
 	"os"
 	"os/user"
-	"path"
 )
 
 var (
 	port      = flag.Int("p", 8080, "listen port")
 	logFile   = flag.String("log", "", "log.SetOutput")
-	shareFile = flag.String("share", "", "what to serve under /share/, defaults to ~/share/ if unset")
+	sharePrefix = flag.String("share", "", "what to serve under /share/, defaults to ~/share/ if unset")
 
 	usr *user.User
 	err error
@@ -34,8 +33,8 @@ func init() {
 		log.SetOutput(f)
 	}
 
-	if *shareFile == "" {
-		*shareFile = path.Join(usr.HomeDir, "share")
+	if *sharePrefix == "" {
+		*sharePrefix = usr.HomeDir
 	}
 }
 
@@ -60,11 +59,11 @@ func (ws *WatServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/share/", &LogServer{Name: "http.FileServer", Inner: http.FileServer(http.Dir(*shareFile))})
 	http.Handle("/", &LogServer{Name: "wat", Inner: &WatServer{}})
+	http.Handle("/share/", &LogServer{Name: " fs", Inner: http.FileServer(http.Dir(*sharePrefix))})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
 	log.Printf("Listening on %s...", addr)
-	log.Printf("/share/ -> %s", *shareFile)
+	log.Printf("/share/ -> %s", *sharePrefix)
 	http.ListenAndServe(addr, nil)
 }
