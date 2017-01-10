@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"jdid.co/logger"
 	"log"
 	"net/http"
 	"os"
@@ -10,8 +11,8 @@ import (
 )
 
 var (
-	port      = flag.Int("p", 8080, "listen port")
-	logFile   = flag.String("log", "", "log.SetOutput")
+	port        = flag.Int("p", 8080, "listen port")
+	logFile     = flag.String("log", "", "log.SetOutput")
 	sharePrefix = flag.String("share", "", "what to serve under /share/, defaults to ~/share/ if unset")
 
 	usr *user.User
@@ -38,20 +39,6 @@ func init() {
 	}
 }
 
-type LogServer struct {
-	Name  string
-	Inner http.Handler
-}
-
-func (ls *LogServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	var prefix string
-	if ls.Name != "" {
-		prefix = ls.Name + "> "
-	}
-	log.Printf("%sserving %s -> %s", prefix, r.Header.Get("X-FORWARDED-FOR"), r.URL)
-	ls.Inner.ServeHTTP(w, r)
-}
-
 type WatServer struct{}
 
 func (ws *WatServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -59,8 +46,8 @@ func (ws *WatServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/", &LogServer{Name: "wat", Inner: &WatServer{}})
-	http.Handle("/share/", &LogServer{Name: " fs", Inner: http.FileServer(http.Dir(*sharePrefix))})
+	http.Handle("/", &logger.LogServer{Name: "wat", Inner: &WatServer{}})
+	http.Handle("/share/", &logger.LogServer{Name: " fs", Inner: http.FileServer(http.Dir(*sharePrefix))})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
 	log.Printf("Listening on %s...", addr)
