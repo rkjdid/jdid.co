@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"os/user"
+	"path"
 )
 
 var (
@@ -35,7 +36,7 @@ func init() {
 	}
 
 	if *sharePrefix == "" {
-		*sharePrefix = usr.HomeDir
+		*sharePrefix = path.Join(usr.HomeDir, "share")
 	}
 }
 
@@ -47,7 +48,7 @@ func (ws *WatServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/",       &logger.LogServer{Name: "wat", Inner: &WatServer{}})
+	http.Handle("/", &logger.LogServer{Name: "wat", Inner: &WatServer{}})
 	http.Handle("/share/", &logger.LogServer{Name: " fs", Inner: http.FileServer(http.Dir(*sharePrefix))})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
