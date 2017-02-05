@@ -42,11 +42,12 @@ func init() {
 type WatServer struct{}
 
 func (ws *WatServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusNotFound)
 	fmt.Fprintf(w, "<html><head><title>what?</title></head><body>looking for <em>%s</em> ?</body>", r.URL.Path)
 }
 
 func main() {
-	http.Handle("/", &logger.LogServer{Name: "wat", Inner: &WatServer{}})
+	http.Handle("/",       &logger.LogServer{Name: "wat", Inner: &WatServer{}})
 	http.Handle("/share/", &logger.LogServer{Name: " fs", Inner: http.FileServer(http.Dir(*sharePrefix))})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
