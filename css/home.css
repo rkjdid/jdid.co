@@ -28,7 +28,7 @@
 }
 
 .right p {
-	margin-left: 72px;
+	margin: auto auto auto 72px;
 	color: black;
 	font-size: 36pt;
 	line-height: 36pt;
