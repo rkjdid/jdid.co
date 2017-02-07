@@ -39,7 +39,7 @@ a:hover {
 }
 
 /* some helper classes */
-.right {text-align: right;}
+.right, .aright {text-align: right;}
 .air {margin-top: 5px;}
 .break {margin-bottom: 25px;}
 .w50 {width: 50%;}
@@ -78,4 +78,64 @@ a:hover {
 .table.t2 .row .c0 {
 	display: table-cell;
 	width: 95px;
+}
+
+/* other general layout things */
+.cell .fix {
+	position: fixed;
+	top: 44%;
+	right: 50%;
+	font-size: 48pt;
+}
+
+.left {
+	background: #7eceb0;
+	text-align: right;
+}
+.left img:hover {
+	opacity: 1;
+}
+
+
+.right img {
+	max-width: 100%;
+}
+
+.right a {
+	color: black;
+	opacity: .50;
+	text-decoration: none;
+}
+.right a:hover {
+	color: black;
+	opacity: 1;
+	text-decoration: none;
+}
+
+.right {
+	background: #90d5bc;
+	text-align: left;
+}
+
+.right .table {
+	margin-left: 72px
+}
+
+.right h1, .right h2 {
+	font-size: 3em;
+}
+
+.right p {
+	font-size: 2em;
+}
+
+.header p {
+	margin-top: 36px;
+	margin-bottom: 72px;
+}
+.cell h2 {
+	margin-top: 18px;
+}
+.cell p {
+	margin-bottom: 36px;
 }
