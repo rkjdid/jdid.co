@@ -25,12 +25,14 @@ const (
 var fileServers []string = []string{flagShare, flagCss, flagJs, flagImg}
 
 var (
+	cfgPath    = flag.String("cfg", "", "cfg path, defaults to <root>/config.json")
 	port       = flag.Int("p", 8080, "listen port")
 	logFile    = flag.String("log", "", "log.SetOutput")
 	rootPrefix = flag.String("root", "~", "root path of project for resources (share, css, js, img...)")
 	htmlRoot   = flag.String("html", "", "path to html templates, defaults to <root>/html/")
 	debug      = flag.Bool("debug", false, "debug mode")
 
+	cfg *Config
 	usr *user.User
 	err error
 )
@@ -59,6 +61,9 @@ func init() {
 	}
 	if *htmlRoot == "" {
 		*htmlRoot = path.Join(*rootPrefix, "html")
+	}
+	if *cfgPath == "" {
+		*cfgPath = path.Join(*rootPrefix, "config.json")
 	}
 
 	if *debug {
@@ -105,6 +110,11 @@ func newSiphonServer(target string, handler http.Handler) *xhttp.SiphonServer {
 }
 
 func main() {
+	cfg, err := LoadConfigFile(*cfgPath)
+	if err != nil {
+		log.Fatal("LoadConfigFile", err)
+	}
+
 	r := mux.NewRouter()
 
 	// statix & shit
@@ -128,23 +138,8 @@ func main() {
 	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
 
 	// works pages
-	works := []Work{
-		NewWork(
-			"smart-grids brain project",
-			"http://smartgridsbrain.citedudesign.com/",
-
-			`Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du `+
-				`<a href="https://solarsoundsystem.org/">Solar Sound System</a>, avec la `+
-				`<a href="http://citedudesign.com/">Cité du Design</a>`,
-			"/img/sgrp.png",
-			"brain pic",
-			Spec{Label: "when", Content: "2016"},
-			Spec{Label: "technique",
-				Content: "python/django, js/jquery, js/leaflet, js/gsap"},
-		),
-	}
-	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", works)))
-	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", works)))
+	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
+	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", cfg.Works)))
 
 	// root handle on mux Router
 	http.Handle("/", &xhttp.LogServer{Handler: r})

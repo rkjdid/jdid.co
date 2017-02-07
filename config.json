@@ -1,0 +1,24 @@
+{
+	"Root": "/home/rkj/go/src/jdid.co/gohome/config.json",
+	"Works": [
+		{
+			"Title": "smart-grids brain project",
+			"About": "Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du \u003ca href=\"https://solarsoundsystem.org/\"\u003eSolar Sound System\u003c/a\u003e, avec la \u003ca href=\"http://citedudesign.com/\"\u003eCité du Design\u003c/a\u003e",
+			"Web": "http://smartgridsbrain.citedudesign.com/",
+			"Image": {
+				"Src": "/img/sgrp.png",
+				"Alt": "brain pic"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2016"
+				},
+				{
+					"Label": "technique",
+					"Content": "python/django, js/jquery, js/leaflet, js/gsap"
+				}
+			]
+		}
+	]
+}
