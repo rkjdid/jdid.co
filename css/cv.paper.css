@@ -1,0 +1,110 @@
+/* old base.css */
+* {
+	margin: 0;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 11pt;
+  font-weight: normal;
+}
+
+mark {
+	background: none;
+	color: inherit;
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+hr {
+	border: 1px solid #161616;
+	margin: 8px 0 16px 0;
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: normal;;
+	margin-top: 35px;
+}
+
+a {
+	color: #363636;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
+/* some helper classes */
+.right, .aright {text-align: right;}
+.air {margin-top: 5px;}
+.break {margin-bottom: 25px;}
+.w50 {width: 50%;}
+.fixback img {
+	max-width: 3%;
+	position: fixed;
+	left: 30px;
+	top: 22px;
+}
+
+/* roxor .table */
+.table {
+	display: table;
+}
+.table.sp10 {
+	border-spacing: 0 10px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+.table.sp0 {
+	border-spacing: 0 0;
+}
+.table .row {
+	display: table-row;
+	margin-bottom: 10px;
+}
+
+.row .cell {
+	display: table-cell;
+}
+
+.table .row .c0, .table .row .label {
+	display: table-cell;
+	width: 150px;
+}
+.table.t2 .row .c0 {
+	display: table-cell;
+	width: 95px;
+}
+
+/* old cv.css */
+body {
+	background: #ebebeb;
+	font-family: "Times New Roman", serif;
+
+	line-height: 1.30em;
+}
+
+a {
+	color: #727272;
+	text-decoration: none;
+}
+a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+section {
+	margin: 15px 0;
+}
+
+section#cv {
+	width: 800px;
+	margin: auto;
+	padding: 5px 20px;
+	background: white;
+}
