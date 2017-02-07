@@ -44,10 +44,14 @@ a:hover {
 .break {margin-bottom: 25px;}
 .w50 {width: 50%;}
 .fixback img {
+	opacity: .45;
 	max-width: 3%;
 	position: fixed;
 	left: 30px;
 	top: 22px;
+}
+.fixback img:hover {
+	opacity: .85;
 }
 
 /* roxor .table */
