@@ -79,6 +79,15 @@ func init() {
 	}
 }
 
+func newWorksServer(name string, works []Work) *xhttp.HtmlServer {
+	return &xhttp.HtmlServer{
+		Root:  *htmlRoot,
+		Debug: *debug,
+		Name:  name,
+		Data:  Data{Works: works},
+	}
+}
+
 func newHtmlServer(name string) *xhttp.HtmlServer {
 	return &xhttp.HtmlServer{
 		Root:  *htmlRoot,
@@ -97,6 +106,8 @@ func newSiphonServer(target string, handler http.Handler) *xhttp.SiphonServer {
 
 func main() {
 	r := mux.NewRouter()
+
+	// statix & shit
 	r.Handle("/favicon.ico", http.RedirectHandler("/img/favicon.png", http.StatusTemporaryRedirect))
 	for _, fs := range fileServers {
 		flg := flag.Lookup(fs)
@@ -109,13 +120,33 @@ func main() {
 			http.StripPrefix(prefix, http.FileServer(http.Dir(path.Join(*rootPrefix, flg.Name)))))
 		log.Printf("file server on /%s/ -> %s/", flg.Name, path.Join(*rootPrefix, flg.Name))
 	}
-	r.PathPrefix("/cv/").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
-	r.PathPrefix("/works/").Handler(newSiphonServer("/works/", newHtmlServer("works.html")))
-	r.PathPrefix("/fr/").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
-	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
-	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newHtmlServer("works.html")))
-	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
+	// main paths
+	r.Handle("/", newSiphonServer("/", newHtmlServer("home.html")))
+	r.PathPrefix("/fr/").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
+	r.PathPrefix("/cv/").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
+	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
+
+	// works pages
+	works := []Work {
+		NewWork(
+			"smart-grids brain project",
+			"http://smartgridsbrain.citedudesign.com/",
+
+			`Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du ` +
+			`<a href="https://solarsoundsystem.org/">Solar Sound System</a>, avec la ` +
+			`<a href="http://citedudesign.com/">Cité du Design</a>`,
+			"/img/sgrp.png",
+			"brain pic",
+			Spec{Label: "when", Content: "2016"},
+			Spec{Label: "technique",
+				Content: "python/django, js/jquery, js/leaflet, js/gsap"},
+		),
+	}
+	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", works)))
+	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", works)))
+
+	// root handle on mux Router
 	http.Handle("/", &xhttp.LogServer{Handler: r})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
