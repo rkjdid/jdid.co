@@ -128,14 +128,14 @@ func main() {
 	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
 
 	// works pages
-	works := []Work {
+	works := []Work{
 		NewWork(
 			"smart-grids brain project",
 			"http://smartgridsbrain.citedudesign.com/",
 
-			`Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du ` +
-			`<a href="https://solarsoundsystem.org/">Solar Sound System</a>, avec la ` +
-			`<a href="http://citedudesign.com/">Cité du Design</a>`,
+			`Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du `+
+				`<a href="https://solarsoundsystem.org/">Solar Sound System</a>, avec la `+
+				`<a href="http://citedudesign.com/">Cité du Design</a>`,
 			"/img/sgrp.png",
 			"brain pic",
 			Spec{Label: "when", Content: "2016"},

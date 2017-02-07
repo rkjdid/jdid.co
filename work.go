@@ -12,9 +12,9 @@ type Spec struct {
 
 type Work struct {
 	Title, About template.HTML
-	Web template.URL
-	Image Image
-	Specs []Spec
+	Web          template.URL
+	Image        Image
+	Specs        []Spec
 }
 
 type Data struct {
@@ -22,8 +22,8 @@ type Data struct {
 }
 
 func NewSpec(label, content string) Spec {
-	return Spec {
-		Label: template.HTML(label),
+	return Spec{
+		Label:   template.HTML(label),
 		Content: template.HTML(content),
 	}
 }
@@ -31,7 +31,7 @@ func NewSpec(label, content string) Spec {
 func NewWork(title, web, about, isrc, ialt string, specs ...Spec) Work {
 	return Work{
 		Title: template.HTML(title),
-		Web: template.URL(web),
+		Web:   template.URL(web),
 		About: template.HTML(about),
 		Image: Image{
 			Src: isrc,
