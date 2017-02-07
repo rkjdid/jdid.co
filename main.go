@@ -123,8 +123,8 @@ func main() {
 
 	// main paths
 	r.Handle("/", newSiphonServer("/", newHtmlServer("home.html")))
-	r.PathPrefix("/fr/").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
-	r.PathPrefix("/cv/").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
+	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
+	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
 	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
 
 	// works pages
