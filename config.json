@@ -2,8 +2,31 @@
 	"Root": "/home/rkj/go/src/jdid.co/gohome/config.json",
 	"Works": [
 		{
+			"Title": "jdid.co",
+			"About": "Written in go, a way of playing with net/http and template/html frameworks",
+			"Web": "/",
+			"Image": {
+				"Src": "/img/jdid.png?v0",
+				"Alt": "jdid.co"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2017"
+				},
+				{
+					"Label": "technique",
+					"Content": "go, go/gorilla"
+				},
+				{
+					"Label": "github",
+					"Content": "<a href='https://github.com/rkjdid/jdid.co'>rkjdid/jdid.co</a>"
+				}
+			]
+		},
+		{
 			"Title": "smart-grids brain project",
-			"About": "Projet de recherche sur l'énergie et le smart-grid, conduit par l'équipe du \u003ca href=\"https://solarsoundsystem.org/\"\u003eSolar Sound System\u003c/a\u003e, avec la \u003ca href=\"http://citedudesign.com/\"\u003eCité du Design\u003c/a\u003e",
+			"About": "Research project on energy and smart-grids, conducted by <a href=\"https://solarsoundsystem.org/\">Solar Sound System</a> team, with <a href=\"http://citedudesign.com/\">Cité du Design</a>.",
 			"Web": "http://smartgridsbrain.citedudesign.com/",
 			"Image": {
 				"Src": "/img/sgrp.png",
@@ -13,12 +36,33 @@
 				{
 					"Label": "when",
 					"Content": "2016"
-				},
-				{
+				}, {
 					"Label": "technique",
 					"Content": "python/django, js/jquery, js/leaflet, js/gsap"
 				}
 			]
-		}
+		},
+		{
+			"Title": "festival échos",
+			"About": "Treasure map to the ever-echoing main cultural event of the decade. Renewed effort since 2013 with our beloved <a href='https://www.facebook.com/association.dome/'>Dôme team</a>.",
+			"Web": "http://festivalechos.fr/",
+			"Image": {
+				"Src": "/img/echos.png",
+				"Alt": "minihorn"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2016, <a href='http://festivalechos.fr/2015/'>2015</a>, <a href='http://festivalechos.fr/2014/'>2014</a>, <a href='http://festivalechos.fr/2013/'>2013</a>"
+				}, {
+					"Label": "technique",
+					"Content": "python/django, js/jquery"
+				}, {
+					"Label": "github",
+					"Content": "<a href='https://github.com/rkjdid/festivalechos'>rkjdid/festivalechos</a>"
+				}
+			]
+		},
+
 	]
 }
