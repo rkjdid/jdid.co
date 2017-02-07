@@ -7,7 +7,7 @@
 
 	<link rel="icon" type="image/png" href="/img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/css/base.css?v1" />
-	<link rel="stylesheet" type="text/css" href="/css/works.css?v0"/>
+	<link rel="stylesheet" type="text/css" href="/css/works.css?v1"/>
 </head>
 <body class="table works">
 <div class="row">
@@ -20,28 +20,33 @@
 			<article class="row header">
 				<p>
 					<a href="/">jdid.co</a> is home to <a href="/cv">romain knezevic</a>,
-					web developper and <a href="https://golang.org" target="_blank">golang enthusiast</a>, an attempt at making clean and
-					usable websites in an ocean of www is being made since 2012, here is a
-					subset result of this effort
+					web developper and <a href="https://golang.org" target="_blank">golang enthusiast</a>, an attempt at making
+					finely crafted and usable websites in an ocean of www is being made since 2012, here is a subset result of this effort
 				</p>
 			</article>
 
-			{{range $w := .Works}}
+			{{range .Works}}
 				<article class="row work">
-					<h2><a href="{{ $w.Web }}">{{ $w.Title }}</a></h2>
+					<h2>
+						{{if .Web}}<a href="{{.Web}}">{{.Title}}</a>
+						{{else}}{{.Title}}
+						{{end}}
+					</h2>
 					<hr>
-					<a href="{{ $w.Web }}"><img src="{{ $w.Image.Src }}" alt="{{ $w.Image.Alt }}"/></a>
+					{{if .Web}}<a href="{{.Web}}"><img src="{{.Image.Src}}" alt="{{.Image.Alt}}"/></a>
+					{{else}}<img src="{{.Image.Src}}" alt="{{.Image.Alt}}"/>
+					{{end}}
 					<p class="about">
-						{{ $w.About }}
+						{{.About}}
 					</p>
 					<div class="details table sp10">
-						{{range $p := $w.Specs}}
+						{{range .Specs}}
 						<div class="row">
 							<div class="cell c0">
-								<em>{{ $p.Label }}</em>
+								<em>{{.Label}}</em>
 							</div>
 							<div class="cell">
-								{{ $p.Content }}
+								{{.Content}}
 							</div>
 						</div>
 						{{end}}

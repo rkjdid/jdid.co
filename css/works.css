@@ -4,6 +4,10 @@
 	position: absolute;
 }
 
+.cell .row p {
+	max-width: 95%;
+}
+
 .works .row, .works .row .cell {
 	height: 100%;
 	vertical-align: middle;
@@ -22,6 +26,17 @@
 	width: 36%;
 	vertical-align: middle;
 }
+.work h2 a, .work > a  {
+	opacity: 1;
+}
+.work h2 {
+	margin-top: 36px;
+}
+
+.right > .table {
+	padding-bottom: 72px;
+}
+
 .right .work .table {
 	margin: 0;
 }
