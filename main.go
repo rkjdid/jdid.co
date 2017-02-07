@@ -131,6 +131,9 @@ func main() {
 		log.Printf("file server on /%s/ -> %s/", flg.Name, path.Join(*rootPrefix, flg.Name))
 	}
 
+	// other pages
+	r.Handle("/cv/old/", newHtmlServer("cv.paper.html"))
+
 	// main paths
 	r.Handle("/", newSiphonServer("/", newHtmlServer("home.html")))
 	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
@@ -141,8 +144,6 @@ func main() {
 	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
 	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", cfg.Works)))
 
-	// other pages
-	r.Handle("/cv/old/", newHtmlServer("cv.paper.html"))
 
 	// root handle on mux Router
 	http.Handle("/", &xhttp.LogServer{Handler: r})
