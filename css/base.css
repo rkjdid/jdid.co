@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-family: arial, sans-serif;
+	font-size: 11pt;
+  font-weight: normal;
+  line-height: 1.30em;
+}
+
+mark {
+	background: none;
+	color: inherit;
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+hr {
+	border: 1px solid #161616;
+	margin: 8px 0 16px 0;
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: normal;;
+	margin-top: 35px;
+}
+
+/* some helper classes */
+.right {text-align: right;}
+.air {margin-top: 5px;}
+.break {margin-bottom: 5px;}
+
+/* roxor .table */
+.table {
+	display: table;
+}
+.table.sp10 {
+	border-spacing: 0 10px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+.table.sp0 {
+	border-spacing: 0 0;
+}
+.table .row {
+	display: table-row;
+	margin-bottom: 10px;
+}
+
+.table .row .c0, .table .row .label {
+	display: table-cell;
+	width: 150px;
+}
+.table.t2 .row .c0 {
+	display: table-cell;
+	width: 95px;
+}
