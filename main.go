@@ -116,7 +116,7 @@ func main() {
 	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newHtmlServer("works.html")))
 	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
-	http.Handle("/", &xhttp.LogServer{Name: "jco", Handler: r})
+	http.Handle("/", &xhttp.LogServer{Handler: r})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
 	log.Printf("Listening on %s...", addr)
