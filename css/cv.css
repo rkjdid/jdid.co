@@ -1,6 +1,17 @@
 body {
 	background: #ebebeb;
 	font-family: "Times New Roman", serif;
+
+	line-height: 1.30em;
+}
+
+a {
+	color: #727272;
+	text-decoration: none;
+}
+a:hover {
+	color: black;
+	text-decoration: underline;
 }
 
 section {

@@ -1,0 +1,35 @@
+.home {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.home .row, .home .row .cell {
+	height: 100%;
+	vertical-align: middle;
+}
+
+.left {
+	background: #7eceb0;
+	text-align: right;
+}
+
+.left img.jdid {
+	max-width: 50%;
+	opacity: .88;
+}
+.left img:hover {
+	opacity: 1;
+}
+
+.right {
+	background: #90d5bc;
+	text-align: left;
+}
+
+.right p {
+	margin-left: 72px;
+	color: black;
+	font-size: 36pt;
+	line-height: 36pt;
+}

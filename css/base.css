@@ -6,7 +6,6 @@ body {
 	font-family: arial, sans-serif;
 	font-size: 11pt;
   font-weight: normal;
-  line-height: 1.30em;
 }
 
 mark {
@@ -30,10 +29,26 @@ h1 {
 	margin-top: 35px;
 }
 
+a {
+	color: #363636;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
 /* some helper classes */
 .right {text-align: right;}
 .air {margin-top: 5px;}
-.break {margin-bottom: 5px;}
+.break {margin-bottom: 25px;}
+.w50 {width: 50%;}
+.fixback img {
+	max-width: 3%;
+	position: fixed;
+	left: 30px;
+	top: 22px;
+}
 
 /* roxor .table */
 .table {
@@ -50,6 +65,10 @@ h1 {
 .table .row {
 	display: table-row;
 	margin-bottom: 10px;
+}
+
+.row .cell {
+	display: table-cell;
 }
 
 .table .row .c0, .table .row .label {
