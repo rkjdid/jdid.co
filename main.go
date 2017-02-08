@@ -132,7 +132,7 @@ func main() {
 	}
 
 	// main paths, from specific to broad
-	r.PathPrefix("/fr/cv/old").Handler(newSiphonServer("/cv/old/", newHtmlServer("cv.paper.html")))
+	r.PathPrefix("/fr/cv/old").Handler(newSiphonServer("/fr/cv/old/", newHtmlServer("cv.paper.html")))
 	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
 	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", cfg.Works)))
 
