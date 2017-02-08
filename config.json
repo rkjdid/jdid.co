@@ -64,6 +64,29 @@
 			]
 		},
 		{
+			"Title": "evasion trollaise",
+			"About": "Some cutie I made with <a href='http://www.andricardin.com/'>andricardin</a> for a romantic lover hotêl suite <3",
+			"Web": "/works/evasion/",
+			"Image": {
+				"Src": "/img/evatroll.png",
+				"Alt": "evasion"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2014"
+				},
+				{
+					"Label": "technique",
+					"Content": "seo, python/django, css"
+				},
+				{
+					"Label": "github",
+					"Content": "<a href='https://github.com/rkjdid/evasion'>rkjdid/evasion</a>"
+				}
+			]
+		},
+		{
 			"Title": "ateliers des marques",
 			"About": "Very first encounter with the full-stack o_o",
 			"Web": "/works/adm/",
