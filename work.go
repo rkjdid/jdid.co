@@ -13,6 +13,7 @@ type Spec struct {
 type Work struct {
 	Title, About template.HTML
 	Web          template.URL
+	Blank        bool
 	Image        Image
 	Specs        []Spec
 }

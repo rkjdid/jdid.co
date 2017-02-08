@@ -28,12 +28,12 @@
 			{{range .Works}}
 				<article class="row work">
 					<h2>
-						{{if .Web}}<a href="{{.Web}}">{{.Title}}</a>
+						{{if .Web}}<a href="{{.Web}}" {{if .Blank}}target="_blank"{{end}}>{{.Title}}</a>
 						{{else}}{{.Title}}
 						{{end}}
 					</h2>
 					<hr>
-					{{if .Web}}<a href="{{.Web}}"><img src="{{.Image.Src}}" alt="{{.Image.Alt}}"/></a>
+					{{if .Web}}<a href="{{.Web}}" {{if .Blank}}target="_blank"{{end}}><img src="{{.Image.Src}}" alt="{{.Image.Alt}}"/></a>
 					{{else}}<img src="{{.Image.Src}}" alt="{{.Image.Alt}}"/>
 					{{end}}
 					<p class="about">
