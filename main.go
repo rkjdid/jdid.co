@@ -131,19 +131,17 @@ func main() {
 		log.Printf("file server on /%s/ -> %s/", flg.Name, path.Join(*rootPrefix, flg.Name))
 	}
 
-	// other pages
-	r.Handle("/cv/old/", newHtmlServer("cv.paper.html"))
-
-	// main paths
-	r.Handle("/", newSiphonServer("/", newHtmlServer("home.html")))
-	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
-	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
+	// main paths, from specific to broad
+	r.PathPrefix("/fr/cv/old").Handler(newSiphonServer("/cv/old/", newHtmlServer("cv.paper.html")))
 	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
-
-	// works pages
-	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
 	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", cfg.Works)))
 
+	r.PathPrefix("/cv/old").Handler(newSiphonServer("/cv/old/", newHtmlServer("cv.paper.html")))
+	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
+	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
+
+	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
+	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
 	// root handle on mux Router
 	http.Handle("/", &xhttp.LogServer{Handler: r})
