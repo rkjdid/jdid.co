@@ -62,6 +62,29 @@
 					"Content": "<a href='https://github.com/rkjdid/festivalechos'>rkjdid/festivalechos</a>"
 				}
 			]
+		},
+		{
+			"Title": "ateliers des marques",
+			"About": "Very first encounter with the full-stack o_o",
+			"Web": "/works/adm/",
+			"Image": {
+				"Src": "/img/adm.png",
+				"Alt": "adm"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2012"
+				},
+				{
+					"Label": "technique",
+					"Content": "python/django, js/jquery, ajax, css/animation"
+				},
+				{
+					"Label": "github",
+					"Content": "<a href='https://github.com/rkjdid/adm'>rkjdid/adm</a>"
+				}
+			]
 		}
 	]
 }
