@@ -4,9 +4,9 @@
 		{
 			"Title": "jdid.co",
 			"About": "Written in go, a way of playing with net/http and template/html frameworks",
-			"Web": "/",
+			"Web": "/works/",
 			"Image": {
-				"Src": "/img/jdid.png?v0",
+				"Src": "/img/jdid.mandelbrot.png",
 				"Alt": "jdid.co"
 			},
 			"Specs": [
