@@ -23,26 +23,7 @@
 					"Content": "<a href='https://github.com/rkjdid/jdid.co'>rkjdid/jdid.co</a>"
 				}
 			]
-		},
-		{
-			"Title": "smart-grids brain project",
-			"About": "Research project on energy and smart-grids, conducted by <a href=\"https://solarsoundsystem.org/\">Solar Sound System</a> team, with <a href=\"http://citedudesign.com/\">Cité du Design</a>.",
-			"Web": "http://smartgridsbrain.citedudesign.com/",
-			"Image": {
-				"Src": "/img/sgrp.png",
-				"Alt": "brain pic"
-			},
-			"Specs": [
-				{
-					"Label": "when",
-					"Content": "2016"
-				}, {
-					"Label": "technique",
-					"Content": "python/django, js/jquery, js/leaflet, js/gsap"
-				}
-			]
-		},
-		{
+		}, {
 			"Title": "festival échos",
 			"About": "Treasure map to the ever-echoing main cultural event of the decade. Renewed effort since 2013 with our beloved <a href='https://www.facebook.com/association.dome/'>Dôme team</a>.",
 			"Web": "http://festivalechos.fr/",
@@ -62,8 +43,24 @@
 					"Content": "<a href='https://github.com/rkjdid/festivalechos'>rkjdid/festivalechos</a>"
 				}
 			]
-		},
-		{
+		}, {
+			"Title": "smart-grids brain project",
+			"About": "Research project on energy and smart-grids, conducted by <a href=\"https://solarsoundsystem.org/\">Solar Sound System</a> team, with <a href=\"http://citedudesign.com/\">Cité du Design</a>.",
+			"Web": "http://smartgridsbrain.citedudesign.com/",
+			"Image": {
+				"Src": "/img/sgrp.png",
+				"Alt": "brain pic"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2016"
+				}, {
+					"Label": "technique",
+					"Content": "python/django, js/jquery, js/leaflet, js/gsap"
+				}
+			]
+		}, {
 			"Title": "evasion trollaise",
 			"About": "Some cutie I made with <a href='http://www.andricardin.com/'>andricardin</a> for a romantic lover hotêl suite <3",
 			"Web": "/works/evasion/",
@@ -74,7 +71,7 @@
 			"Specs": [
 				{
 					"Label": "when",
-					"Content": "2014"
+					"Content": "2015"
 				},
 				{
 					"Label": "technique",
@@ -85,8 +82,7 @@
 					"Content": "<a href='https://github.com/rkjdid/evasion'>rkjdid/evasion</a>"
 				}
 			]
-		},
-		{
+		}, {
 			"Title": "ateliers des marques",
 			"About": "Very first encounter with the full-stack o_o",
 			"Web": "/works/adm/",
