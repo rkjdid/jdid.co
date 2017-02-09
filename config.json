@@ -61,6 +61,28 @@
 				}
 			]
 		}, {
+			"Title": "matabase teaser",
+			"About": "Teaser presentation for <a href='https://matabase.fr/'>Matabase</a>, an innovating start-up operating in Paris. This presentation was built using the excellent javascript animation library <a href='https://greensock.com/gsap'>gsap</a>.",
+			"Web": "/works/matabase/",
+			"Image": {
+				"Src": "/img/matabase.png",
+				"Alt": "matabase"
+			},
+			"Specs": [
+				{
+					"Label": "when",
+					"Content": "2014"
+				},
+				{
+					"Label": "technique",
+					"Content": "js/gsap, js/jquery, python/django"
+				},
+				{
+					"Label": "github",
+					"Content": "<a href='https://github.com/rkjdid/matabase'>rkjdid/matabase</a>"
+				}
+			]
+		}, {
 			"Title": "evasion trollaise",
 			"About": "Some cutie I made with <a href='http://www.andricardin.com/'>andricardin</a> for a romantic lover hotêl suite <3",
 			"Web": "/works/evasion/",
