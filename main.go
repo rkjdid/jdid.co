@@ -13,16 +13,13 @@ import (
 	"github.com/gorilla/mux"
 )
 
-const (
-	flagShare = "share"
-	flagCss   = "css"
-	flagJs    = "js"
-	flagImg   = "img"
-)
-
-// default file servers, if not handled by some reverse proxy.. useful for localhosting.
-// Use w/ -debug [-<flagName>...]
-var fileServers []string = []string{flagShare, flagCss, flagJs, flagImg}
+// default static file servers to serve when -debug is enabled
+var defaultFileServers []string = []string{
+	"share",
+	"css",
+	"img",
+	"js",
+}
 
 var (
 	cfgPath    = flag.String("cfg", "", "cfg path, defaults to <root>/config.json")
@@ -39,7 +36,7 @@ var (
 
 func init() {
 	// add static directory flags to command line flagset
-	for _, fs := range fileServers {
+	for _, fs := range defaultFileServers {
 		_ = flag.Bool(fs, true, fmt.Sprintf("[debug] enable file server on <root>/%s/", fs))
 	}
 	flag.Parse()
@@ -68,11 +65,11 @@ func init() {
 
 	if *debug {
 		// populate default fileServers if debug is on
-		for i, name := range fileServers {
+		for i, name := range defaultFileServers {
 			flg := flag.Lookup(name)
 			if flg == nil {
 				log.Printf("bad flag lookup: %s, removing from dirFlags", name)
-				fileServers = append(fileServers[:i], fileServers[i+1:]...)
+				defaultFileServers = append(defaultFileServers[:i], defaultFileServers[i+1:]...)
 				continue
 			}
 			if flg.Value.String() == "" {
@@ -119,7 +116,7 @@ func main() {
 
 	// statix & shit
 	r.Handle("/favicon.ico", http.RedirectHandler("/img/favicon.png", http.StatusTemporaryRedirect))
-	for _, fs := range fileServers {
+	for _, fs := range defaultFileServers {
 		flg := flag.Lookup(fs)
 		if flg == nil {
 			log.Fatal("got unexpected nil lookup", fs)
