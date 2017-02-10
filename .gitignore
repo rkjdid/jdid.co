@@ -2,3 +2,5 @@
 *.idea
 
 *.pid
+
+config.json
