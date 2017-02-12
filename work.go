@@ -18,8 +18,19 @@ type Work struct {
 	Specs        []Spec
 }
 
-type Data struct {
+type TplData struct {
 	Works []Work
+	Lang  string
+}
+
+// SetLang applies provided lang to d.
+// If d is nil, a new one is created with provided lang.
+func (d *TplData) SetLang(lang string) *TplData {
+	if d == nil {
+		return &TplData{Lang: lang}
+	}
+	d.Lang = lang
+	return d
 }
 
 func NewSpec(label, content string) Spec {

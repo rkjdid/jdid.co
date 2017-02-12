@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"jdid.co/xhttp"
 	"log"
 	"net/http"
 	"os"
@@ -81,33 +80,32 @@ func init() {
 	}
 }
 
-func newWorksServer(name string, works []Work) *xhttp.HtmlServer {
-	return &xhttp.HtmlServer{
-		Root:  *htmlRoot,
-		Debug: *debug,
-		Name:  name,
-		Data:  Data{Works: works},
+func newWorksServer(name string, works []Work) *HtmlServer {
+	s := newHtmlServer(name)
+	s.Data = &TplData{Works: works}
+	return s
+}
+
+func newHtmlServer(name string) *HtmlServer {
+	return &HtmlServer{
+		Root:           *htmlRoot,
+		Debug:          *debug,
+		Name:           name,
+		Data:           nil,
+		DefaultLang:    "en",
+		SupportedLangs: []string{"en", "fr"},
 	}
 }
 
-func newHtmlServer(name string) *xhttp.HtmlServer {
-	return &xhttp.HtmlServer{
-		Root:  *htmlRoot,
-		Debug: *debug,
-		Name:  name,
-		Data:  nil,
-	}
-}
-
-func newSiphonServer(target string, handler http.Handler) *xhttp.SiphonServer {
-	return &xhttp.SiphonServer{
+func newSiphonServer(target string, handler http.Handler) *SiphonServer {
+	return &SiphonServer{
 		Handler: handler,
 		Target:  target,
 	}
 }
 
 func main() {
-	cfg, err := LoadConfigFile(*cfgPath)
+	cfg, err = LoadConfigFile(*cfgPath)
 	if err != nil {
 		log.Fatal("LoadConfigFile", err)
 	}
@@ -140,8 +138,8 @@ func main() {
 	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
 	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
-	// root handle on mux Router
-	http.Handle("/", &xhttp.LogServer{Handler: r})
+	// root handle on mux Router, clear handler
+	http.Handle("/", &LogServer{Handler: r})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
 	log.Printf("Listening on %s...", addr)
