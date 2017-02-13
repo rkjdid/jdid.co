@@ -1,0 +1,127 @@
+#: standard input:24
+msgid "28 y/o"
+msgstr ""
+
+#: standard input:31
+msgid "skills"
+msgstr ""
+
+#: standard input:35
+msgid "domains"
+msgstr ""
+
+#: standard input:36
+msgid "domains.content"
+msgstr "Distributed applications, p2p networks, front-end web development."
+
+#: standard input:39
+msgid "languages"
+msgstr ""
+
+#: standard input:45
+msgid "other"
+msgstr ""
+
+#: standard input:51
+msgid "idioms"
+msgstr ""
+
+#: standard input:52
+msgid "idioms.content"
+msgstr "French mother tongue, English fluent."
+
+#: standard input:57
+msgid "work experience"
+msgstr ""
+
+#: standard input:61
+msgid "since"
+msgstr ""
+
+#: standard input:64
+msgid "Freelancer"
+msgstr ""
+
+#: standard input:64
+msgid "Web development & misc"
+msgstr ""
+
+#: standard input:67
+msgid "freelance.content"
+msgstr "Full-stack web development, web-design integration, administration & maintenance."
+
+#: standard input:99
+msgid "Golang developer"
+msgstr ""
+
+#: standard input:102
+msgid "wt.content"
+msgstr "Conception and development of middleware layers on a secured distributed architecture. "
+"Application protocol and API development."
+
+#: standard input:113
+msgid "C# developer"
+msgstr ""
+
+#: standard input:116
+msgid "beweis.content"
+msgstr "Development of tracking applications for the industry business."
+
+#: standard input:127
+msgid "Front-end developer"
+msgstr ""
+
+#: standard input:130
+msgid "gymglish.content"
+msgstr "Javascript applications development and front-end integration."
+
+#: standard input:141
+msgid "R&D project collaborator"
+msgstr "Collaborateur R&D"
+
+#: standard input:144
+msgid "wtpoc.content"
+msgstr "Designing a proof-of-concept for a synchronized distributed architecture in "
+"suboptimal wireless network using embedded unix computers. Goal was to "
+"deliver gigabytes of multimedia data across the wireless network in relative short time, "
+"the job included system administration & configuration, communication protocol development, "
+"file sharing methods benchmarking."
+
+#: standard input:154
+msgid "education"
+msgstr ""
+
+#: standard input:162
+msgid "IT engineer school"
+msgstr ""
+
+#: standard input:163
+msgid "Sweden"
+msgstr ""
+
+#: standard input:164
+msgid "Erasmus exchange"
+msgstr ""
+
+#: standard input:172
+msgid "IT university"
+msgstr ""
+
+#: standard input:173
+msgid "IT, software engineering"
+msgstr ""
+
+#: standard input:186
+msgid "mobility.content"
+msgstr "I'm currently in Marseille, France but am willing "
+"to relocate for the right job."
+
+#: standard input:190
+msgid "looking for"
+msgstr ""
+
+#: standard input:192
+msgid "want.content"
+msgstr "Anything <a href='http://golang.org/'>go related</a> would be ideal. "
+"I am however curious and open to most things, and will look at any offer "
+"that you think match my profile and is of interest to me."

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if ! command -v msgfmt &> /dev/null; then
+  echo "missing msgfmt exe" >&2
+  exit 1
+fi
+
+if [ "$(basename $(pwd))" != "locales" ]; then
+  echo "must be in locales dir" >&2
+  exit 1
+fi
+
+for d in */LC_MESSAGES; do
+  echo generating $d/messages.mo
+  msgfmt $d/*.po -o $d/messages.mo
+done
+

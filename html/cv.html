@@ -21,51 +21,50 @@
 			<section class="contact">
 				<p class="aright">
 					<mark>Romain Knezevic</mark><br>
-					28 ans<br>
-					59 rue saint-savournin<br>
+					{{gettext .Lang "28 y/o"}}<br>
+					59 rue Saint-Savournin<br>
 					13005 – Marseille, France<br>
 					Tél. +33619010975 – <a href="mailto:rk@jdid.co">rk@jdid.co</a><br>
 				</p>
 			</section>
 			<section class="skills">
-				<h1>compétences</h1>
+				<h1>{{gettext .Lang "skills"}}</h1>
 				<hr>
 				<div class="table sp10">
 					<div class="row">
-						<span class="label"><mark>domaines</mark></span>
-						<p>Conception logicielle, applicatons distribuées, réseaux peer-to-peer, web front-end, notions
-							d'administration système.</p>
+						<span class="label"><mark>{{gettext .Lang "domains"}}</mark></span>
+						<p>{{gettext .Lang "domains.content"}}</p>
 					</div>
 					<div class="row">
-						<span class="label"><mark>langages</mark></span>
+						<span class="label"><mark>{{gettext .Lang "languages"}}</mark></span>
 						<p>
 							<mark>golang</mark>, c#, python, javascript, bash, sql
 						</p>
 					</div>
 					<div class="row">
-						<span class="label"><mark>autres</mark></span>
+						<span class="label"><mark>{{gettext .Lang "other"}}</mark></span>
 						<p>
-							git, nginx, grunt, npm/bower, django, sass, .net wpf, photoshop<br>
+							git, nginx, grunt, npm/bower, django, sass, .net wpf, photoshop
 						</p>
 					</div>
 					<div class="row">
-						<span class="label"><mark>langues</mark></span>
-						<p>Français et Anglais courant.</p>
+						<span class="label"><mark>{{gettext .Lang "idioms"}}</mark></span>
+						<p>{{gettext .Lang "idioms.content"}}</p>
 					</div>
 				</div>
 			</section>
 			<section class="work">
-				<h1>expérience professionelle</h1>
+				<h1>{{gettext .Lang "work experience"}}</h1>
 				<hr>
 				<div class="table sp10">
 					<div class="row">
-						<span class="label"><mark>depuis 2012</mark></span>
+						<span class="label"><mark>{{gettext .Lang "since"}} 2012</mark></span>
 						<div>
 							<p>
-								<mark>Auto-entreprise</mark> – Création de sites web
+								<mark>{{gettext .Lang "Freelancer"}}</mark> – {{gettext .Lang "Web development"}}
 							</p>
 							<p>
-								Développement back et front-end, intégration web design, administration, maintenance.
+								{{gettext .Lang "freelance.content"}}
 							</p>
 							<div class="table t2 sp0">
 								<div class="row">
@@ -87,7 +86,7 @@
 										<em>technologies</em>
 									</div>
 									<div class="c1">
-										<p>python, django, javascript, nginx</p>
+										<p>python/django, golang, html/css/js, grunt, nginx...</p>
 									</div>
 								</div>
 							</div>
@@ -97,14 +96,13 @@
 						<span class="label"><mark>2015-2016</mark></span>
 						<div>
 							<p>
-								<mark>Développeur golang</mark> – Wifi Telecom – Martigues
+								<mark>{{gettext .Lang "Golang developer"}}</mark> – Wifi Telecom – Martigues
 							</p>
 							<p>
-								Conception et développement middleware sur architecture distribuée sécurisée, développement api
-								client/serveur, administration et configuration système.
+								{{gettext .Lang "wt.content"}}
 							</p>
 							<p>
-								<em>technologies :</em> golang, bittorrent, tls, bash
+								<em>technologies :</em> golang, bittorrent, bash
 							</p>
 						</div>
 					</div>
@@ -112,10 +110,10 @@
 						<span class="label"><mark>2014</mark></span>
 						<div>
 							<p>
-								<mark>Développeur c#</mark> – Beweis RFID – Aubagne<br>
+								<mark>{{gettext .Lang "C# developer"}}</mark> – Beweis RFID – Aubagne<br>
 							</p>
 							<p>
-								Conception et développement middleware et interface utilisateur pour logiciels de suivi industriel.
+								{{gettext .Lang "beweis.content"}}
 							</p>
 							<p>
 								<em>technologies :</em> c#, .net 4.5, .net compact 2.0, .net wpf
@@ -126,10 +124,10 @@
 						<span class="label"><mark>2014</mark></span>
 						<div>
 							<p>
-								<mark>Développeur front-end</mark> – Gymglish – Paris<br>
+								<mark>{{gettext .Lang "Front-end developer"}}</mark> – Gymglish – Paris<br>
 							</p>
 							<p>
-								Développement d'applications javascript, intégration front-end<br>
+								{{gettext .Lang "gymglish.content"}}<br>
 							</p>
 							<p>
 								<em>technologies :</em> javascript, css, python
@@ -140,21 +138,20 @@
 						<span class="label"><mark>2013</mark></span>
 						<div>
 							<p>
-								<mark>Collaborateur freelance projet R&D</mark> – Wifi Telecom – Martigues<br>
+								<mark>{{gettext .Lang "R&D project collaborator"}}</mark> – Wifi Telecom – Martigues<br>
 							</p>
 							<p>
-								Développement d’un proof-of-concept pour une architecture distribuée de diffusion vidéo sécurisée sur
-								embarqué : veille technologique et benchmarking, administration système, communication client/serveur.
+								{{gettext .Lang "wtpoc.content"}}
 							</p>
 							<p>
-								<em>technologies :</em> bittorrent, python, bash
+								<em>technologies :</em> bittorrent, python, bash, raspberry pi
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section id="education">
-				<h1>formation</h1>
+				<h1>{{gettext .Lang "education"}}</h1>
 				<hr>
 				<div class="table sp10">
 					<div class="row">
@@ -162,9 +159,9 @@
 						<div>
 							<p>
 								<mark>ESIL</mark> – Marseille<br>
-								École d'ingénierie informatique<br>
-								<mark class="air">Uppsala University</mark> – Suède<br>
-								Échange erasmus 2010 – 2011
+								{{gettext .Lang "IT engineer school"}}<br>
+								<mark class="air">Uppsala University</mark> – {{gettext .Lang "Sweden"}}<br>
+								{{gettext .Lang "Erasmus exchange"}} 2010 – 2011
 							</p>
 						</div>
 					</div>
@@ -172,8 +169,8 @@
 						<span class="label"><mark>2009</mark></span>
 						<div>
 							<p>
-								<mark>IUT Informatique</mark> – Aix-en-Provence<br>
-								Informatique, génie logiciel
+								<mark>{{gettext .Lang "IT university"}}</mark> – Aix-en-Provence<br>
+								{{gettext .Lang "IT, software engineering"}}
 							</p>
 						</div>
 					</div>
@@ -184,17 +181,15 @@
 				<hr>
 				<div class="table sp10">
 					<div class="row">
-						<span class="label"><mark>mobilité</mark></span>
+						<span class="label"><mark>{{gettext .Lang "mobility"}}</mark></span>
 						<p>
-							Permis B et A1 (125cc) et véhicules associés.
+							{{gettext .Lang "mobility.content"}}
 						</p>
 					</div>
 					<div class="row">
-						<span class="label"><mark>missions recherchées</mark></span>
+						<span class="label"><mark>{{gettext .Lang "looking for"}}</mark></span>
 						<p>
-							Plusieurs critères entrent en compte, mais l'utilisation de <a href="https://golang.org/">golang</a> est
-							un atout de taille. Le design / debug d'applications distribuées également.
-							Je travaille habituellement tout ou partie de mes heures à distance quand cela est possible.
+							{{gettext .Lang "want.content"}}
 						</p>
 					</div>
 				</div>

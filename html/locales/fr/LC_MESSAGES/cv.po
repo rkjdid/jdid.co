@@ -1,0 +1,128 @@
+#: standard input:24
+msgid "28 y/o"
+msgstr "28 ans"
+
+#: standard input:31
+msgid "skills"
+msgstr "compétences"
+
+#: standard input:35
+msgid "domains"
+msgstr "domaines"
+
+#: standard input:36
+msgid "domains.content"
+msgstr "Conception logicielle, applicatons distribuées, réseaux peer-to-peer, web front-end, notions d'administration système."
+
+#: standard input:39
+msgid "languages"
+msgstr "langages"
+
+#: standard input:45
+msgid "other"
+msgstr "autres"
+
+#: standard input:51
+msgid "idioms"
+msgstr "langues"
+
+#: standard input:52
+msgid "idioms.content"
+msgstr "Anglais courant"
+
+#: standard input:57
+msgid "work experience"
+msgstr "expérience professionnelle"
+
+#: standard input:61
+msgid "since"
+msgstr "depuis"
+
+#: standard input:64
+msgid "Freelancer"
+msgstr "Auto-entreprise"
+
+#: standard input:67
+msgid "freelance.content"
+msgstr "Développement back et front-end, intégration web design, administration, maintenance."
+
+#: standard input:99
+msgid "Golang developer"
+msgstr "Développeur golang"
+
+#: standard input:102
+msgid "wt.content"
+msgstr "Conception et développement middleware sur architecture "
+"distribuée sécurisée, développement api client/serveur, "
+"administration et configuration système."
+
+#: standard input:113
+msgid "C# developer"
+msgstr "Développeur C#"
+
+#: standard input:116
+msgid "beweis.content"
+msgstr "Conception et développement middleware et interface utilisateur "
+"pour logiciels de suivi industriel."
+
+#: standard input:127
+msgid "Front-end developer"
+msgstr "Développeur front-end"
+
+#: standard input:130
+msgid "gymglish.content"
+msgstr "Développement d'applications javascript, intégration front-end."
+
+#: standard input:141
+msgid "R&D project collaborator"
+msgstr "Collaborateur projet R&D"
+
+#: standard input:144
+msgid "wtpoc.content"
+msgstr "Développement d’un proof-of-concept pour une architecture distribuée "
+"de diffusion vidéo sécurisée sur embarqué : veille technologique et benchmarking, "
+"administration système, développement de protocole client/serveur."
+
+#: standard input:154
+msgid "education"
+msgstr "formation"
+
+#: standard input:162
+msgid "IT engineer school"
+msgstr "École d'ingénierie informatique"
+
+#: standard input:163
+msgid "Sweden"
+msgstr "Suède"
+
+#: standard input:164
+msgid "Erasmus exchange"
+msgstr "Échange Erasmus"
+
+#: standard input:172
+msgid "IT University"
+msgstr "IUT Informatique"
+
+#: standard input:173
+msgid "IT, software engineering"
+msgstr "Informatique, génie logiciel"
+
+#: standard input:184
+msgid "mobility"
+msgstr "mobilité"
+
+#: standard input:186
+msgid "mobility.content"
+msgstr "Permis B et A1 (125cc) et véhicules associés, relocalisation possible."
+
+#: standard input:190
+msgid "looking for"
+msgstr "missions recherchées"
+
+#: standard input:192
+msgid "want.content"
+msgstr "Idéalement sur des applications back-end classique ou distribuées, "
+"idéalement en <a href='http://golang.org/'>golang</a>. "
+"Compte tenu de mon expérience, je suis bien sûr à l'écoute de missions "
+"dans le domaine du web, ou de tout autre type de poste techniquement "
+"ouvert, dans la mesure de mes compétences."

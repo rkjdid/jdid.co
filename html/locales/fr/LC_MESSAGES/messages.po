@@ -1,0 +1,6 @@
+# header files, generate messages.mo using `msgfmt *.po`
+msgid ""
+msgstr ""
+"Language: fr"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
