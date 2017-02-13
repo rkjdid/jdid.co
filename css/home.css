@@ -4,6 +4,10 @@
 	position: absolute;
 }
 
+.home h1 {
+	margin-top: 0;
+}
+
 .home .row, .home .row .cell {
 	height: 100%;
 	vertical-align: middle;
