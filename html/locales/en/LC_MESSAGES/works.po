@@ -1,0 +1,8 @@
+#: standard input:22
+msgid "jdid.header"
+msgstr "<h1 class=\"humble inline\"><a href=\"/\">jdid.co</a></h1> "
+"<p class=\"inline\"> is home to <a href=\"/cv\">romain knezevic</a>, "
+"web developper and <a href=\"https://golang.org\" "
+"target=\"_blank\">golang enthusiast</a>, an attempt at making "
+"finely crafted and usable websites in an ocean of www is being "
+"made since 2012, here is a subset result of this effort"
