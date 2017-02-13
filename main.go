@@ -10,6 +10,7 @@ import (
 	"path"
 
 	"github.com/gorilla/mux"
+	"github.com/samuel/go-gettext/gettext"
 )
 
 // default static file servers to serve when -debug is enabled
@@ -21,16 +22,18 @@ var defaultFileServers []string = []string{
 }
 
 var (
-	cfgPath    = flag.String("cfg", "", "cfg path, defaults to <root>/config.json")
-	port       = flag.Int("p", 8080, "listen port")
-	logFile    = flag.String("log", "", "log.SetOutput")
-	rootPrefix = flag.String("root", "~", "root path of project for resources (share, css, js, img...)")
-	htmlRoot   = flag.String("html", "", "path to html templates, defaults to <root>/html/")
-	debug      = flag.Bool("debug", false, "debug mode")
+	cfgPath     = flag.String("cfg", "", "cfg path, defaults to <root>/config.json")
+	port        = flag.Int("p", 8080, "listen port")
+	logFile     = flag.String("log", "", "log.SetOutput")
+	rootPrefix  = flag.String("root", "~", "root path of project for resources (share, css, js, img...)")
+	htmlRoot    = flag.String("html", "", "path to html templates, defaults to <root>/html/")
+	localesRoot = flag.String("locales", "", "path to locales tree, defaults to <html>/locales/")
+	debug       = flag.Bool("debug", false, "debug mode")
 
-	cfg *Config
-	usr *user.User
-	err error
+	locales *gettext.Domain
+	cfg     *Config
+	usr     *user.User
+	err     error
 )
 
 func init() {
@@ -57,6 +60,9 @@ func init() {
 	}
 	if *htmlRoot == "" {
 		*htmlRoot = path.Join(*rootPrefix, "html")
+	}
+	if *localesRoot == "" {
+		*localesRoot = path.Join(*htmlRoot, "locales")
 	}
 	if *cfgPath == "" {
 		*cfgPath = path.Join(*rootPrefix, "config.json")
@@ -88,12 +94,12 @@ func newWorksServer(name string, works []Work) *HtmlServer {
 
 func newHtmlServer(name string) *HtmlServer {
 	return &HtmlServer{
-		Root:           *htmlRoot,
-		Debug:          *debug,
-		Name:           name,
-		Data:           nil,
-		DefaultLang:    "en",
-		SupportedLangs: []string{"en", "fr"},
+		Root:          *htmlRoot,
+		Debug:         *debug,
+		Name:          name,
+		Data:          nil,
+		DefaultLocale: "en",
+		LocaleDomain:  locales,
 	}
 }
 
@@ -108,6 +114,10 @@ func main() {
 	cfg, err = LoadConfigFile(*cfgPath)
 	if err != nil {
 		log.Fatal("LoadConfigFile", err)
+	}
+	locales, err = gettext.NewDomain("messages", *localesRoot)
+	if err != nil {
+		log.Fatal("gettext.NewDomain", err)
 	}
 
 	r := mux.NewRouter()
@@ -127,11 +137,6 @@ func main() {
 	}
 
 	// main paths, from specific to broad
-	r.PathPrefix("/fr/cv/old").Handler(newSiphonServer("/fr/cv/old/", newHtmlServer("cv.paper.html")))
-	r.PathPrefix("/fr/cv").Handler(newSiphonServer("/fr/cv/", newHtmlServer("cv.html")))
-	r.PathPrefix("/fr/works").Handler(newSiphonServer("/fr/works/", newWorksServer("works.html", cfg.Works)))
-
-	r.PathPrefix("/cv/old").Handler(newSiphonServer("/cv/old/", newHtmlServer("cv.paper.html")))
 	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
 	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
 

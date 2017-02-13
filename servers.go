@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/samuel/go-gettext/gettext"
 	"html/template"
 	"log"
 	"net/http"
@@ -41,21 +42,20 @@ func WrapCustomRW(wr http.ResponseWriter) http.ResponseWriter {
 
 // HtmlServer is a simple html/template server helper
 type HtmlServer struct {
-	Root           string
-	Name           string
-	Data           *TplData
-	Debug          bool
-	DefaultLang    string
-	SupportedLangs []string
+	Root          string
+	Name          string
+	Data          *TplData
+	Debug         bool
+	DefaultLocale string
+	LocaleDomain  *gettext.Domain
 }
 
 func (hs *HtmlServer) IsLangSupported(lang string) bool {
-	for _, s := range hs.SupportedLangs {
-		if s == lang {
-			return true
-		}
+	if hs.LocaleDomain == nil {
+		return false
 	}
-	return false
+	_, ok := hs.LocaleDomain.Languages[lang]
+	return ok
 }
 
 // ProcessLang extracts language information from r, and applies it to w
@@ -99,7 +99,7 @@ func (hs *HtmlServer) ProcessLang(w http.ResponseWriter, r *http.Request) string
 			qLang = reqLang
 		} else {
 			// 4- use default language
-			qLang = hs.DefaultLang
+			qLang = hs.DefaultLocale
 		}
 	}
 
@@ -113,8 +113,19 @@ func (hs *HtmlServer) ProcessLang(w http.ResponseWriter, r *http.Request) string
 	return qLang
 }
 
+func (hs *HtmlServer) Gettext(lang string, msgid string) template.HTML {
+	if hs.LocaleDomain != nil {
+		return template.HTML(hs.LocaleDomain.GetText(lang, msgid))
+	}
+	return template.HTML(msgid)
+}
+
 func (hs *HtmlServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles(path.Join(hs.Root, hs.Name))
+	fns := template.FuncMap{
+		"gettext": hs.Gettext,
+	}
+
+	t, err := template.New(hs.Name).Funcs(fns).ParseFiles(path.Join(hs.Root, hs.Name))
 	if err != nil {
 		log.Printf("%s -> err parsing %s: %s", r.URL.Path, hs.Name, err)
 		if hs.Debug {
