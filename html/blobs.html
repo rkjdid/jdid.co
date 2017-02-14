@@ -1,0 +1,9 @@
+{{define "langs"}}
+<div class="langs">
+	{{if eq .Lang "en"}}
+	<span>EN</span>-<a class="active" href="?lang=fr">FR</a>
+	{{else}}
+	<a class="active" href="?lang=en">EN</a>-<span>FR</span>
+	{{end}}
+</div>
+{{end}}

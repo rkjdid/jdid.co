@@ -7,15 +7,18 @@
 	<title>jdid.co</title>
 
 	<link rel="icon" type="image/png" href="/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="/css/base.css?v1"/>
+	<link rel="stylesheet" type="text/css" href="/css/base.css?v2"/>
 	<link rel="stylesheet" type="text/css" href="/css/home.css?v2"/>
 </head>
 <body class="table home">
 <div class="row">
 	<nav class="cell w50 left">
-		<h1><a href="/">
-			<img class="jdid" src="/img/jdid.co.png" alt="jdid.co" />
-		</a></h1>
+		<div>
+			<h1><a href="/">
+				<img class="jdid" src="/img/jdid.co.png" alt="jdid.co"/>
+			</a></h1>
+			{{template "langs" .}}
+		</div>
 	</nav>
 	<nav class="cell w50 right">
 		<p>

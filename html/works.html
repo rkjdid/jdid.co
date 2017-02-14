@@ -6,14 +6,17 @@
 	<title>jdid.co - portfolio</title>
 
 	<link rel="icon" type="image/png" href="/img/favicon.png">
-	<link rel="stylesheet" type="text/css" href="/css/base.css?v1" />
-	<link rel="stylesheet" type="text/css" href="/css/works.css?v1"/>
+	<link rel="stylesheet" type="text/css" href="/css/base.css?v2" />
+	<link rel="stylesheet" type="text/css" href="/css/works.css?v2"/>
 </head>
 <body class="table works">
 <div class="row">
 	<nav class="cell left w50">
 		<a class="fixback" href="/"><img src="/img/left.png" alt="back" /></a>
-		<h1><a class="fix"  href="/works/">/works/</a></h1>
+		<div class="fix">
+			<h1><a href="/works/">/works/</a></h1>
+			{{template "langs" .}}
+		</div>
 	</nav>
 	<div class="cell right w50">
 		<div class="table">
