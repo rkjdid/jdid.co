@@ -62,7 +62,7 @@ func init() {
 		*htmlRoot = path.Join(*rootPrefix, "html")
 	}
 	if *localesRoot == "" {
-		*localesRoot = path.Join(*htmlRoot, "locales")
+		*localesRoot = path.Join(*rootPrefix, "locales")
 	}
 	if *cfgPath == "" {
 		*cfgPath = path.Join(*rootPrefix, "config.json")
