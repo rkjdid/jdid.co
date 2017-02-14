@@ -128,7 +128,7 @@ func (hs *HtmlServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		"gettext": hs.Gettext,
 	}
 
-	t, err := template.New(hs.Name).Funcs(fns).ParseFiles(path.Join(hs.Root, hs.Name))
+	t, err := template.New(hs.Name).Funcs(fns).ParseGlob(path.Join(hs.Root, "*html"))
 	if err != nil {
 		log.Printf("%s -> err parsing %s: %s", r.URL.Path, hs.Name, err)
 		if hs.Debug {
