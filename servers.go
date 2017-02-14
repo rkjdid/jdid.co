@@ -104,8 +104,11 @@ func (hs *HtmlServer) ProcessLang(w http.ResponseWriter, r *http.Request) string
 	}
 
 	if cookie == nil {
-		cookie = &http.Cookie{Name: "lang"}
+		cookie = &http.Cookie{
+			Name: "lang",
+		}
 	}
+	cookie.Path = "/"
 	cookie.Value = qLang
 
 	// now write cookie to response and return lang value
