@@ -4,10 +4,6 @@
 	position: absolute;
 }
 
-.cell .row p {
-	max-width: 95%;
-}
-
 .works .row, .works .row .cell {
 	height: 100%;
 	vertical-align: middle;

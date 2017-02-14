@@ -137,7 +137,9 @@ a:hover {
 	opacity: 1;
 }
 
-
+.cell.right  {
+	padding-right: 25px;
+}
 .right img {
 	max-width: 100%;
 }
