@@ -13,13 +13,13 @@ var (
 
 type Config struct {
 	Root  string
-	Works []Work
+	Works WorksMap
 }
 
 func NewConfig(root string) (cfg *Config) {
 	cfg = &Config{
 		Root:  root,
-		Works: []Work{},
+		Works: WorksMap{},
 	}
 	return cfg
 }

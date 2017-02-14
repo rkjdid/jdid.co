@@ -86,9 +86,9 @@ func init() {
 	}
 }
 
-func newWorksServer(name string, works []Work) *HtmlServer {
+func newWorksServer(name string, works WorksMap) *HtmlServer {
 	s := newHtmlServer(name)
-	s.Data = &TplData{Works: works}
+	s.WorksMap = works
 	return s
 }
 
@@ -97,7 +97,7 @@ func newHtmlServer(name string) *HtmlServer {
 		Root:          *htmlRoot,
 		Debug:         *debug,
 		Name:          name,
-		Data:          nil,
+		WorksMap:      nil,
 		DefaultLocale: "en",
 		LocaleDomain:  locales,
 	}

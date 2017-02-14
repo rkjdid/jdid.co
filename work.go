@@ -23,6 +23,8 @@ type TplData struct {
 	Lang  string
 }
 
+type WorksMap map[string][]Work
+
 // SetLang applies provided lang to d.
 // If d is nil, a new one is created with provided lang.
 func (d *TplData) SetLang(lang string) *TplData {

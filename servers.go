@@ -44,7 +44,7 @@ func WrapCustomRW(wr http.ResponseWriter) http.ResponseWriter {
 type HtmlServer struct {
 	Root          string
 	Name          string
-	Data          *TplData
+	WorksMap      WorksMap
 	Debug         bool
 	DefaultLocale string
 	LocaleDomain  *gettext.Domain
@@ -140,7 +140,11 @@ func (hs *HtmlServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	lang := hs.ProcessLang(w, r)
-	err = t.ExecuteTemplate(w, hs.Name, hs.Data.SetLang(lang))
+	works, ok := hs.WorksMap[lang]
+	if !ok {
+		works = make([]Work, 0)
+	}
+	err = t.ExecuteTemplate(w, hs.Name, TplData{Lang: lang, Works: works})
 	if err != nil {
 		log.Printf("%s -> err executing template %s: %s", r.URL.Path, hs.Name, err)
 		if hs.Debug {
