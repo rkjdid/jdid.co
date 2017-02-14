@@ -126,6 +126,7 @@ func (hs *HtmlServer) Gettext(lang string, msgid string) template.HTML {
 func (hs *HtmlServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fns := template.FuncMap{
 		"gettext": hs.Gettext,
+		// todo static url builder appending some version to avoid 304
 	}
 
 	t, err := template.New(hs.Name).Funcs(fns).ParseGlob(path.Join(hs.Root, "*html"))
