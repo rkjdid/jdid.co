@@ -12,7 +12,7 @@ msgstr ""
 
 #: standard input:36
 msgid "domains.content"
-msgstr "Distributed applications, p2p networks, front-end web development."
+msgstr "<mark>Distributed applications</mark>, p2p networks, <mark>front-end web development</mark>."
 
 #: standard input:39
 msgid "languages"

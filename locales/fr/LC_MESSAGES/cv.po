@@ -12,7 +12,7 @@ msgstr "domaines"
 
 #: standard input:36
 msgid "domains.content"
-msgstr "Conception logicielle, applicatons distribuées, réseaux peer-to-peer, web front-end, notions d'administration système."
+msgstr "<mark>Applicatons distribuées</mark>, réseaux peer-to-peer, <mark>web front-end</mark>, notions d'administration système."
 
 #: standard input:39
 msgid "languages"
