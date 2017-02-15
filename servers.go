@@ -75,7 +75,9 @@ func (hs *HtmlServer) ProcessLang(w http.ResponseWriter, r *http.Request) string
 		qLang = ""
 	}
 	// fix bad cookie
-	if cookie != nil && !hs.IsLangSupported(cookie.Value) {
+	if cookie != nil && (!hs.IsLangSupported(cookie.Value) || cookie.Path != "/") {
+		cookie.MaxAge = -1 // delete
+		http.SetCookie(w, cookie)
 		cookie = nil
 	}
 
