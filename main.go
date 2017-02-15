@@ -141,11 +141,9 @@ func main() {
 	// main paths, from specific to broad
 	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
 	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
-
-	r.PathPrefix("/fr").Handler(newSiphonServer("/fr/", newHtmlServer("home.html")))
 	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
-	// root handle on mux Router, clear handler
+	// root handle on mux Router, do logging here at top level
 	http.Handle("/", &LogServer{Handler: r})
 
 	addr := fmt.Sprintf("localhost:%d", *port)
