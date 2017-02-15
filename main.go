@@ -124,16 +124,18 @@ func main() {
 
 	// statix & shit
 	r.Handle("/favicon.ico", http.RedirectHandler("/img/favicon.png", http.StatusTemporaryRedirect))
-	for _, fs := range defaultFileServers {
-		flg := flag.Lookup(fs)
-		if flg == nil {
-			log.Fatal("got unexpected nil lookup", fs)
-		}
+	if *debug {
+		for _, fs := range defaultFileServers {
+			flg := flag.Lookup(fs)
+			if flg == nil {
+				log.Fatal("got unexpected nil lookup", fs)
+			}
 
-		prefix := fmt.Sprintf("/%s/", flg.Name)
-		r.PathPrefix(prefix).Handler(
-			http.StripPrefix(prefix, http.FileServer(http.Dir(path.Join(*rootPrefix, flg.Name)))))
-		log.Printf("file server on /%s/ -> %s/", flg.Name, path.Join(*rootPrefix, flg.Name))
+			prefix := fmt.Sprintf("/%s/", flg.Name)
+			r.PathPrefix(prefix).Handler(
+				http.StripPrefix(prefix, http.FileServer(http.Dir(path.Join(*rootPrefix, flg.Name)))))
+			log.Printf("file server on /%s/ -> %s/", flg.Name, path.Join(*rootPrefix, flg.Name))
+		}
 	}
 
 	// main paths, from specific to broad
