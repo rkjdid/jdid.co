@@ -2,7 +2,7 @@
 msgid "jdid.header"
 msgstr "<h1 class=\"humble inline\"><a href=\"/\">jdid.co</a></h1> "
 "<p class=\"inline\"> est l'enseigne de <a href=\"/cv\">Romain Knezevic</a>, "
-"développeur web et amateur <a href=\"http://golang.org/\">golang</a>. "
+"développeur web et amateur <a target=\"_blank\" href=\"http://golang.org/\">golang</a>. "
 "Depuis 2012 je réalise des sites web sur mesure avec un focus "
 "sur la finition et l'utilisabilité, et essaye de proposer "
 "une alternative de qualité à un océan de wordpress et jalis.<br>"
