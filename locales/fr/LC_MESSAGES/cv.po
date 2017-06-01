@@ -38,6 +38,13 @@ msgstr "expérience professionnelle"
 msgid "since"
 msgstr "depuis"
 
+msgid "Tech lead"
+msgstr "Lead technique"
+
+msgid "regenbox.content"
+msgstr "Implementation full stack d'une interface web de contrôle et collecte de données "
+"de régénérations de piles alcalines sur arduino."
+
 #: standard input:67
 msgid "NodeJS developer"
 msgstr "Développeur NodeJS"

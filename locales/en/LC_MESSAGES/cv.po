@@ -42,6 +42,13 @@ msgstr ""
 msgid "NodeJS developer"
 msgstr ""
 
+msgid "Tech lead"
+msgstr ""
+
+msgid "regenbox.content"
+msgstr "Full-stack implementation of remote controller for arduino device, "
+"gathering data about alcaline batteries regeneration."
+
 #: standard input:71
 msgid "neopost.content"
 msgstr "Carrier integration in service oriented architecture."
