@@ -38,6 +38,14 @@ msgstr ""
 msgid "since"
 msgstr ""
 
+#: standard input:67
+msgid "NodeJS developer"
+msgstr ""
+
+#: standard input:71
+msgid "neopost.content"
+msgstr "Carrier integration in service oriented architecture."
+
 #: standard input:64
 msgid "Freelancer"
 msgstr ""
@@ -125,3 +133,4 @@ msgid "want.content"
 msgstr "Anything <a href='http://golang.org/'>go related</a> would be ideal. "
 "I am however curious and open to most things, and will look at any offer "
 "that you think match my profile and is of interest to me."
+

@@ -38,6 +38,14 @@ msgstr "expérience professionnelle"
 msgid "since"
 msgstr "depuis"
 
+#: standard input:67
+msgid "NodeJS developer"
+msgstr "Développeur NodeJS"
+
+#: standard input:71
+msgid "neopost.content"
+msgstr "Intégration de transporteurs dans une architecture orientée services."
+
 #: standard input:64
 msgid "Freelancer"
 msgstr "Auto-entreprise"
