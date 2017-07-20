@@ -42,7 +42,7 @@ msgstr ""
 msgid "NodeJS developer"
 msgstr ""
 
-msgid "Tech lead"
+msgid "Full-stack developer"
 msgstr ""
 
 msgid "regenbox.content"

@@ -38,8 +38,8 @@ msgstr "expérience professionnelle"
 msgid "since"
 msgstr "depuis"
 
-msgid "Tech lead"
-msgstr "Lead technique"
+msgid "Full-stack developer"
+msgstr "Développeur full-stack"
 
 msgid "regenbox.content"
 msgstr "Implementation full stack d'une interface web de contrôle et collecte de données "
