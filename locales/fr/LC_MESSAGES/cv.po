@@ -49,6 +49,16 @@ msgstr "Implementation full stack d'une interface web de contrôle et collecte d
 msgid "NodeJS developer"
 msgstr "Développement NodeJS"
 
+msgid "sirdata.content"
+msgstr "En charge du développement de conteneurs alimentant un large volume de "
+"données utilisateur de pre-targeting sur les principales plateformes "
+"<a href='https://fr.wikipedia.org/wiki/Real_Time_BiddingFull' target='_blank'>RTB</a> telles que "
+"Adobe, Yahoo, Oracle... via différents APIs et services web."
+
+msgid "ns.content"
+msgstr "Refonte complète et maintenance d'une application web centrale de génération et inventaire de protocoles de saisie "
+"scientifiques pour un client majeur émirati oeuvrant dans les domaine de l'élevage et l'écologie."
+
 #: standard input:71
 msgid "neopost.content"
 msgstr "Intégration de transporteurs dans une architecture orientée services."

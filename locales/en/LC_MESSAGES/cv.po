@@ -45,6 +45,15 @@ msgstr "NodeJS development"
 msgid "Full-stack developer"
 msgstr "Full-stack development"
 
+msgid "sirdata.content"
+msgstr "In charge of containers development for uploading large volumes of pre-targeting user data to major "
+"<a href='https://fr.wikipedia.org/wiki/Real_Time_BiddingFull' target='_blank'>RTB</a> platforms "
+"such as Adobe, Yahoo, Oracle... via various web services and APIs."
+
+msgid "ns.content"
+msgstr "Full rework and maintainance of a central web application for building and storing scientific forms "
+"for a major Emirati client working in breeding and ecology fields."
+
 msgid "regenbox.content"
 msgstr "Full-stack implementation of remote controller for arduino device, "
 "gathering data about alcaline batteries regeneration."
