@@ -40,10 +40,10 @@ msgstr ""
 
 #: standard input:67
 msgid "NodeJS developer"
-msgstr ""
+msgstr "NodeJS development"
 
 msgid "Full-stack developer"
-msgstr ""
+msgstr "Full-stack development"
 
 msgid "regenbox.content"
 msgstr "Full-stack implementation of remote controller for arduino device, "
@@ -67,7 +67,7 @@ msgstr "Full-stack web development, web-design integration, administration & mai
 
 #: standard input:99
 msgid "Golang developer"
-msgstr ""
+msgstr "Golang development"
 
 #: standard input:102
 msgid "wt.content"
@@ -76,7 +76,7 @@ msgstr "Conception and development of middleware layers on a secured distributed
 
 #: standard input:113
 msgid "C# developer"
-msgstr ""
+msgstr "C# development"
 
 #: standard input:116
 msgid "beweis.content"
@@ -84,7 +84,7 @@ msgstr "Development of tracking applications for the industry business."
 
 #: standard input:127
 msgid "Front-end developer"
-msgstr ""
+msgstr "Front-end development"
 
 #: standard input:130
 msgid "gymglish.content"
@@ -129,7 +129,7 @@ msgstr ""
 #: standard input:186
 msgid "mobility.content"
 msgstr "I'm currently in Marseille, France but am willing "
-"to relocate for the right job."
+"to relocate for the right job, also remote missions."
 
 #: standard input:190
 msgid "looking for"
@@ -137,7 +137,6 @@ msgstr ""
 
 #: standard input:192
 msgid "want.content"
-msgstr "Anything <a href='http://golang.org/'>go related</a> would be ideal. "
+msgstr "Anything <a href='http://golang.org/'>go</a> related, remote and challenging would be ideal. "
 "I am however curious and open to most things, and will look at any offer "
 "that you think match my profile and is of interest to me."
-

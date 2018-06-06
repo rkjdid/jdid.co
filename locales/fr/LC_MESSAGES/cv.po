@@ -1,6 +1,6 @@
 #: standard input:24
-msgid "28 y/o"
-msgstr "28 ans"
+msgid "29 y/o"
+msgstr "29 ans"
 
 #: standard input:31
 msgid "skills"
@@ -39,7 +39,7 @@ msgid "since"
 msgstr "depuis"
 
 msgid "Full-stack developer"
-msgstr "Développeur full-stack"
+msgstr "Développement full-stack"
 
 msgid "regenbox.content"
 msgstr "Implementation full stack d'une interface web de contrôle et collecte de données "
@@ -47,7 +47,7 @@ msgstr "Implementation full stack d'une interface web de contrôle et collecte d
 
 #: standard input:67
 msgid "NodeJS developer"
-msgstr "Développeur NodeJS"
+msgstr "Développement NodeJS"
 
 #: standard input:71
 msgid "neopost.content"
@@ -63,7 +63,7 @@ msgstr "Développement back et front-end, intégration web design, administratio
 
 #: standard input:99
 msgid "Golang developer"
-msgstr "Développeur golang"
+msgstr "Développement golang"
 
 #: standard input:102
 msgid "wt.content"
@@ -73,7 +73,7 @@ msgstr "Conception et développement middleware sur architecture "
 
 #: standard input:113
 msgid "C# developer"
-msgstr "Développeur C#"
+msgstr "Développement C#"
 
 #: standard input:116
 msgid "beweis.content"
@@ -82,7 +82,7 @@ msgstr "Conception et développement middleware et interface utilisateur "
 
 #: standard input:127
 msgid "Front-end developer"
-msgstr "Développeur front-end"
+msgstr "Développement front-end"
 
 #: standard input:130
 msgid "gymglish.content"
@@ -90,7 +90,7 @@ msgstr "Développement d'applications javascript, intégration front-end."
 
 #: standard input:141
 msgid "R&D project collaborator"
-msgstr "Collaborateur projet R&D"
+msgstr "Collaboration projet R&D"
 
 #: standard input:144
 msgid "wtpoc.content"
@@ -137,7 +137,6 @@ msgstr "missions recherchées"
 #: standard input:192
 msgid "want.content"
 msgstr "Idéalement sur des applications back-end classique ou distribuées, "
-"idéalement en <a href='http://golang.org/'>golang</a>. "
-"Compte tenu de mon expérience, je suis bien sûr à l'écoute de missions "
-"dans le domaine du web, ou de tout autre type de poste techniquement "
-"ouvert, dans la mesure de mes compétences."
+"idéalement en <a href='http://golang.org/'>golang</a>, idéalement en remote. "
+"Je suis à l'écoute de tous type de missions "
+"ou poste techniquement ouvert."
