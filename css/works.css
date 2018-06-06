@@ -40,3 +40,9 @@
 	margin-left: 16px;
 	font-size: 1em;
 }
+
+@media print {
+	.left.w50 {
+		display: none;
+	}
+}

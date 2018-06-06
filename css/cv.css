@@ -48,3 +48,9 @@ section > .table {
 .work .table .row p, .work .table .row div.table {
 	margin-bottom: 10px;
 }
+
+@media print {
+	.left.w50 {
+		display: none;
+	}
+}
