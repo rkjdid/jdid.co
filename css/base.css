@@ -92,6 +92,12 @@ a:hover {
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
+.table.sp35 {
+	border-spacing: 0 35px;
+}
+.table.sp35 > * > * {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
 .table.sp0 {
 	border-spacing: 0 0;
 }
