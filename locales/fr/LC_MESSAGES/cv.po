@@ -12,7 +12,7 @@ msgstr "domaines"
 
 #: standard input:36
 msgid "domains.content"
-msgstr "<mark>Développement web</mark>, <mark>applicatons distribuées</mark>, réseaux peer-to-peer, notions d'administration système."
+msgstr "<mark>Développement web full-stack</mark>, applicatons distribuées, conception protocoles applicatifs, administration système."
 
 #: standard input:39
 msgid "languages"
