@@ -42,8 +42,8 @@ msgid "Full-stack developer"
 msgstr "Développement full-stack"
 
 msgid "regenbox.content"
-msgstr "Implementation full stack d'une interface web de contrôle et collecte de données "
-"de régénérations de piles alcalines sur arduino."
+msgstr "Implementation du protocole de communication et interface web de contrôle sur arduino pour la "
+"collecte de données de régénérations de piles alcalines sur arduino."
 
 #: standard input:67
 msgid "NodeJS developer"
@@ -61,7 +61,7 @@ msgstr "Refonte complète et maintenance d'une application web centrale de gén�
 
 #: standard input:71
 msgid "neopost.content"
-msgstr "Intégration de transporteurs dans une architecture orientée services."
+msgstr "Intégration de transporteurs dans une architecture orientée services, domaine de la livraison."
 
 #: standard input:64
 msgid "Freelancer"

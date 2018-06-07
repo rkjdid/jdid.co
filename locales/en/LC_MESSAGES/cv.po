@@ -43,7 +43,7 @@ msgid "NodeJS developer"
 msgstr "NodeJS development"
 
 msgid "Full-stack developer"
-msgstr "Full-stack development"
+msgstr "Web development"
 
 msgid "sirdata.content"
 msgstr "Building individual containers for ingesting large volumes of pre-targeting user data to major "
@@ -51,16 +51,16 @@ msgstr "Building individual containers for ingesting large volumes of pre-target
 "such as Adobe, Yahoo, Oracle... via various web services and APIs."
 
 msgid "ns.content"
-msgstr "Full rework and maintainance of a central web application for building and storing scientific forms "
+msgstr "Rework and maintainance of a central web application for building and storing scientific forms "
 "for a major Emirati client working in breeding and ecology fields."
 
 msgid "regenbox.content"
-msgstr "Full-stack implementation of remote controller for arduino device, "
+msgstr "Designing a communication protocol and web interface remote-controller for arduino device, "
 "gathering data about alcaline batteries regeneration."
 
 #: standard input:71
 msgid "neopost.content"
-msgstr "Carrier integration in service oriented architecture."
+msgstr "Carrier integrations in micro-service oriented architecture in the delivery business."
 
 #: standard input:64
 msgid "Freelancer"
