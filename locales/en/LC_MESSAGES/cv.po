@@ -46,7 +46,7 @@ msgid "Full-stack developer"
 msgstr "Full-stack development"
 
 msgid "sirdata.content"
-msgstr "In charge of containers development for uploading large volumes of pre-targeting user data to major "
+msgstr "Building individual containers for ingesting large volumes of pre-targeting user data to major "
 "<a href='https://fr.wikipedia.org/wiki/Real_Time_BiddingFull' target='_blank'>RTB</a> platforms "
 "such as Adobe, Yahoo, Oracle... via various web services and APIs."
 

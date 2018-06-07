@@ -50,7 +50,7 @@ msgid "NodeJS developer"
 msgstr "Développement NodeJS"
 
 msgid "sirdata.content"
-msgstr "En charge du développement de conteneurs alimentant un large volume de "
+msgstr "Construction de conteneurs individuels alimentant un large volume de "
 "données utilisateur de pre-targeting sur les principales plateformes "
 "<a href='https://fr.wikipedia.org/wiki/Real_Time_BiddingFull' target='_blank'>RTB</a> telles que "
 "Adobe, Yahoo, Oracle... via différents APIs et services web."
