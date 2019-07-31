@@ -140,7 +140,7 @@ func main() {
 
 	// main paths, from specific to broad
 	r.PathPrefix("/cv").Handler(newSiphonServer("/cv/", newHtmlServer("cv.html")))
-	r.PathPrefix("/works").Handler(newSiphonServer("/web/", newWorksServer("works.html", cfg.Works)))
+	r.PathPrefix("/works").Handler(newSiphonServer("/works/", newWorksServer("works.html", cfg.Works)))
 	r.PathPrefix("/").Handler(newSiphonServer("/", newHtmlServer("home.html")))
 
 	// root handle on mux Router, do logging here at top level

@@ -14,12 +14,18 @@
 	<nav class="cell left w50">
 		<a class="fixback" href="/"><img src="/img/left.png" alt="back" /></a>
 		<div class="fix">
-			<h1><a href="/web/">/web/</a></h1>
+			<h1><a href="/works/">/works/</a></h1>
 			{{template "langs" .}}
 		</div>
 	</nav>
 	<div class="cell right w50">
 		<div class="table">
+			<article class="row header">
+				<p>
+					{{gettext .Lang "jdid.header"}}
+				</p>
+			</article>
+
 			{{range .Works}}
 				<article class="row work">
 					<h2>
