@@ -53,7 +53,7 @@ msgid "Backend developer"
 msgstr "Développement back-end"
 
 msgid "iweech.content"
-msgstr "Développement back-end sur vélo à assistance électrique haut de gamme. Responsable des couches "
+msgstr "Développement embarqué sur vélo à assistance électrique haut de gamme. Responsable des couches "
 "intermédiaires contenant la logique métier et la transmission des propriétés du vélo via BLE (Bluetooth Low Energy). "
 "Également responsable du développement serveur avec api rest pour intéraction avec les applications mobiles."
 
