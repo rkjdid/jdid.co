@@ -49,6 +49,14 @@ msgstr "Implementation du protocole de communication et interface web de contrô
 msgid "NodeJS developer"
 msgstr "Développement NodeJS"
 
+msgid "Backend developer"
+msgstr "Développeur back-end"
+
+msgid "iweech.content"
+msgstr "Développement back-end sur vélo à assistance électrique haut de gamme. Responsable des couches "
+"intermédiaires contenant la logique métier et la transmission des propriétés du vélo via BLE (Bluetooth Low Energy)."
+"Également responsable du développement serveur avec api rest pour intéraction avec les applications mobiles."
+
 msgid "sirdata.content"
 msgstr "Construction de conteneurs individuels alimentant un large volume de "
 "données utilisateur de pre-targeting sur les principales plateformes "

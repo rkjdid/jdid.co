@@ -45,8 +45,16 @@ msgstr "NodeJS development"
 msgid "Full-stack developer"
 msgstr "Web development"
 
+msgid "Backend developer"
+msgstr ""
+
+msgid "iweech.content"
+msgstr "Working as the lead developer on a high-end electric bike. Responsible for all the "
+"middleware layers implementing business logic and exposing bike properties via BLE (Bluetooth Low Energy)."
+"Also maintainer of the back-end server with restful api for mobile consumption."
+
 msgid "sirdata.content"
-msgstr "Building individual containers for ingesting large volumes of pre-targeting user data to major "
+msgstr "Building pods for ingesting large volumes of pre-targeting user data to major "
 "<a href='https://wikipedia.org/wiki/Real_Time_Bidding' target='_blank'>RTB</a> platforms "
 "such as Adobe, Yahoo, Oracle... via various web services and APIs."
 
