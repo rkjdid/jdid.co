@@ -50,7 +50,7 @@ msgid "NodeJS developer"
 msgstr "Développement NodeJS"
 
 msgid "Backend developer"
-msgstr "Développeur back-end"
+msgstr "Développement back-end"
 
 msgid "iweech.content"
 msgstr "Développement back-end sur vélo à assistance électrique haut de gamme. Responsable des couches "

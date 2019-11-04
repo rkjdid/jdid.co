@@ -46,7 +46,7 @@ msgid "Full-stack developer"
 msgstr "Web development"
 
 msgid "Backend developer"
-msgstr ""
+msgstr "Backend development"
 
 msgid "iweech.content"
 msgstr "Working as the lead developer on a high-end electric bike. Responsible for all the "
