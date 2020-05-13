@@ -1,6 +1,6 @@
 #: standard input:24
-msgid "29 y/o"
-msgstr "29 ans"
+msgid "31 y/o"
+msgstr "31 ans"
 
 #: standard input:31
 msgid "skills"
