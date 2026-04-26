@@ -9,6 +9,23 @@
 	<link rel="icon" type="image/png" href="/img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/css/base.css?v3" />
 	<link rel="stylesheet" type="text/css" href="/css/cv.css?v1"/>
+        <script>
+          function calculateAgeNow (birthDate, otherDate) {
+            birthDate = new Date(birthDate);
+            otherDate = new Date();
+
+            var years = (otherDate.getFullYear() - birthDate.getFullYear());
+
+            if (otherDate.getMonth() < birthDate.getMonth() ||
+              otherDate.getMonth() == birthDate.getMonth() && otherDate.getDate() < birthDate.getDate()) {
+              years--;
+            }
+            return years;
+          }
+          window.onload = function() {
+            document.getElementById('age').innerHTML = calculateAgeNow("01/27/1989");
+          }
+        </script>
 </head>
 <body class="table works">
 <div class="row">
@@ -24,9 +41,9 @@
 			<section class="contact">
 				<p class="aright">
 					<mark>Romain Knezevic</mark><br>
-					{{gettext .Lang "31 y/o"}}<br>
-					36 rue de l'Olivier<br>
-					13005 – Marseille, France<br>
+                                        <span id="age"></span> {{gettext .Lang "y/o"}}<br>
+					54 route de Limoux<br>
+					09500 – Moulin-Neuf, France<br>
 					Tél. +33619010975 – <a href="mailto:rk@jdid.co">rk@jdid.co</a><br>
 				</p>
 			</section>

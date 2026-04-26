@@ -1,5 +1,5 @@
 #: standard input:24
-msgid "28 y/o"
+msgid "y/o"
 msgstr ""
 
 #: standard input:31
